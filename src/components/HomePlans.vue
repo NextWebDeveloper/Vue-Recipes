@@ -1,8 +1,11 @@
 <template>
     <v-container grid-list-lg>
-        <v-layout row>
-            <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">Available Meal Plans</v-flex>
+
+		<v-layout row wrap class="my-5">
+            <v-flex xs12 class="text-xs-center display-2 font-weight-black">Available Meal Plans</v-flex>
+            <v-flex v-if="['home'].indexOf($route.name) > -1" xs12 class="text-xs-center display-1">For detailed information check <router-link to="/menu" class="font-italic black--text">Menu page</router-link></v-flex>
         </v-layout>
+
         <v-layout row wrap>
             <v-flex xs12 sm12 md4>
                 <v-card>
@@ -18,7 +21,7 @@
                         </v-img>
                     </v-responsive>
 
-                    <v-card-text>
+                    <v-card-text v-if="['menu'].includes($route.name)">
                         <div>
                             <h3 class="headline mb-0">Keto</h3>
                             <div>The Keto diet is a high-fat, adequate-protein, low-carbohydrate diet. The diet forces the body to burn fats rather than carbohydrates by putting the body into ketosis.
@@ -46,10 +49,10 @@
                         </v-img>
                     </v-responsive>
 
-                    <v-card-text>
+                    <v-card-text v-if="['menu'].includes($route.name)">
                         <div>
                             <h3 class="headline mb-0">Paleo</h3>
-                            <div>The Paleo diet requires the sole or predominant consumption of foods presumed to have been the only foods available to or consumed by humans during the Paleolithic era.
+                            <div>The Paleo diet requires the sole or predominant consumption of foods presumed to have been the only available to or consumed by humans during the Paleolithic era.
                             </div>
                         </div>
                     </v-card-text>
@@ -74,7 +77,7 @@
                         </v-img>
                     </v-responsive>
 
-                    <v-card-text>
+                    <v-card-text v-if="['menu'].includes($route.name)">
                         <div>
                             <h3 class="headline mb-0">Vegan</h3>
                             <div>The vegan diet abstains from the use of animal products. The vegan diet does not consume meat, diary products, eggs or any all other animal-derived ingredients.
