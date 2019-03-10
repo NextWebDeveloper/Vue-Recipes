@@ -1,4 +1,4 @@
-# trip-weather-check
+# meal-recipes
 
 link to app: https://meal-recipes.firebaseapp.com/
 
