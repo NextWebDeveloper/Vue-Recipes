@@ -4,7 +4,7 @@
             <div class="display-4 font-weight-black white--text text-xs-center">HEALTHY MEALS</div>
             <div class="display-4 font-weight-black white--text text-xs-center mb-3">FOR YOUR TABLE</div>
             <div class="display-1 font-weight-bold white--text text-xs-center">Finally be a foodie at home with fresh, chef-prepared meals delivered daily to your door.</div>
-            <v-btn fab class="mt-5 brown darken-4">
+            <v-btn fab class="mt-5 brown darken-4 no-pointer">
             <v-icon large color="white">expand_more</v-icon>
             </v-btn>
         </v-layout>
@@ -19,9 +19,12 @@ export default {
 
 <style scoped>
 .home-hero {
-    background: url('https://images.unsplash.com/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1357&q=80');
+    background: url('../assets/main-bg.jpg');
     background-size: cover;
     width: 100%;
     height: 100%;
+}
+.no-pointer {
+	cursor: default;
 }
 </style>
