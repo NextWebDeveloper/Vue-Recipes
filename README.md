@@ -1,4 +1,6 @@
-# meal
+# trip-weather-check
+
+link to app: https://meal-recipes.firebaseapp.com/
 
 ## Project setup
 ```
